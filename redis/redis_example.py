@@ -14,7 +14,7 @@ if __name__ == '__main__':
     logger = logging.getLogger()
     logger.setLevel(level=logging.DEBUG)
  
-    logger.info('argument test')
+    logger.info('redis test')
     
     rdconn = redis.Redis(host='localhost', port=6379, db=0)
 
