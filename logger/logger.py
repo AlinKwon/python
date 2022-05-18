@@ -18,7 +18,7 @@ class Log():
         self.logger = logging.getLogger('mp')
         if not os.path.exists("./logs/"):
             os.makedirs("./logs/")
-        log_file_handler = TimedRotatingFileHandler(filename="./logs/selfstore.log", when="midnight", interval=1, backupCount=15, encoding='UTF-8')
+        log_file_handler = TimedRotatingFileHandler(filename="./logs/project.log", when="midnight", interval=1, backupCount=15, encoding='UTF-8')
         log_file_handler.setFormatter(logging.Formatter('%(asctime)s\tFile \"%(filename)s\",line %(lineno)s\t%(levelname)s: %(message)s')) 
         self.logger.addHandler(log_file_handler)
         self.logger.addHandler(logging.StreamHandler())
