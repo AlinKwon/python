@@ -119,7 +119,7 @@ def main2():
                     writeLine.append('"')
                     desc = soup.find('p', attrs={'class':'c-menu-detail__txt--desc'})
                     if (desc != None) :
-                        writeLine.append(desc.get_text().strip().replace('\n', ' '))
+                        writeLine.append(''.join(desc.get_text().strip().splitlines()))
                     writeLine.append('"')                
                     
                 else:
